@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  adminer:
+    build: .
+    image: keboola/adminer
+    ports:
+      - "3012:80"
+  dev:
+    image: keboola/adminer
+    ports:
+      - "3013:80"
+    volumes:
+      - ./:/var/www/html
